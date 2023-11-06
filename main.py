@@ -1,6 +1,6 @@
 """
-This file works as the menu to go to each project (both command line and GUI based projects),
-through the command line. 
+This file works as a menu to go to the project the user wants to give a look to 
+(both command line and GUI based projects), through the command line. 
 """
 
 def main():
