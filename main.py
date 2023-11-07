@@ -6,29 +6,30 @@ import os
 import pyfiglet
 import time
 
-
 def main():
     os.system("cls")
     print(f"{pyfiglet.figlet_format("Wellcome to my projects!  =)", font="big")}")
     time.sleep(3)
     os.system("cls")
       
-    print(f"""#----------------------------------------------------------------------------------#
-# Would you like to see the command line based projects or the GUI based projects? #
-#----------------------------------------------------------------------------------#""")
+    print("------------------------------------------------------------------\nWould you like to see the command line or the GUI based projects?")
     
     end = False
-    while not end:
-        print(f"# OPTIONS:                                                                         #\n# 1. Command line based projects                                                   #\n# 2. GUI based projects                                                            #\n# 3. Exit                                                                          #")
-        option = input("# Choose an option: ")
+    
+    while end == False:
+        print("------------------------------------------------------------------\n1. Command line projects\n2. GUI based projects\n3. Exit")
+        option = input("------------------------------------------------------------------\nChoose an option: ")
+        
         if option == "1":
-            print(f"Hi")
+            print("------------------------------------------------------------------\n1. Test\n2. Exit")
             end = True
         elif option == "2":
-            print("\nThis option isn't available yet, sorry! =(")
+            print("------------------------------------------------------------------\nNo uploaded projects yet, sorry. =(")
             end = True
         elif option == "3":
-            print("\nSee you soon!")
-            end = True        
-            
+            end = True
+        else:
+            print("------------------------------------------------------------------\nInvalid option, try again.")
+            time.sleep(2)
+            os.system("cls")
 main()
