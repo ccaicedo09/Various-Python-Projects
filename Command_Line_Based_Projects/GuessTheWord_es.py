@@ -91,4 +91,5 @@ def main():
     else:
         print(f"\n¡Perdiste! La palabra era {working_word}.")
 
-main()
+if __name__ == "__main__":
+    main()
