@@ -38,41 +38,33 @@ class Menu():
         return project_option
         
 def main():
-    end = False   
-    type_option = Menu.main_menu()
     
-    if type_option == 3:
+    main_menu_option = Menu.main_menu()
+    end = False
+    if main_menu_option == 3:
         end = True
-        
-    while end == False:
-        project_option = Menu.choose_project(type_option)
-               
-        if type_option == 1:
-            if project_option == 1:
+    
+    if not end:   
+        if main_menu_option == 1:
+            #CHOOSE PROJECT WITHIN CLB PROJECTS
+            project_menu_option = Menu.choose_project(main_menu_option)
+            if project_menu_option == 1:
                 GuessTheWord_es.main()
-                break
-            elif project_option == 2:
+            elif project_menu_option == 2:
                 main()
-            elif project_option == 3:
+            else:
                 end = True
-                #os.system("cls")
-                break
-        elif type_option == 2:
-            if project_option == 1:
+        
+        if main_menu_option == 2:
+            #CHOOSE PROJECT WITHIN GUIB PROJECTS
+            project_menu_option = Menu.choose_project(main_menu_option)
+            if project_menu_option == 1:
                 print("Test")
-            elif project_option == 2:
+            elif project_menu_option == 2:
                 main()
-            elif project_option == 3:
+            else:
                 end = True
-                break               
-        elif type_option == 3:
-            end = True
             
-    while end == True:
-        print(f"{pyfiglet.figlet_format("See you soon!  =)", font="big")}")
-        break
-
-
 if __name__ == "__main__":
     Menu.wellcome()
     main()
