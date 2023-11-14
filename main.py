@@ -19,6 +19,7 @@ class Menu():
         os.system("cls")
         
     def main_menu(): #Asks user which type of project do they want to see
+        print("\n------------------OPTIONS------------------\n")
         print("Would you like to see command line or GUI based projects?\n-1. Command Line Based Projects\n-2. GUI Based Projects\n-3. Exit")
         type_option = int(input("\nChoose an option ---> "))
 
@@ -31,14 +32,39 @@ class Menu():
             print("-1. Guess The Word (Spanish Version)\n-2. Exit main menu\n-3. Exit")
             project_option = int(input("\nChoose an option ---> "))
         elif type_option == 2:
-            print("-1. No projects yet\n-2. Exit main menu\n-3. Exit")
+            print("-1. Test\n-2. Exit main menu\n-3. Exit")
             project_option = int(input("\nChoose an option ---> "))
 
         return project_option
         
 def main():
-    Menu.wellcome()
-
-
+    
+    main_menu_option = Menu.main_menu()
+    end = False
+    if main_menu_option == 3:
+        end = True
+    
+    if not end:   
+        if main_menu_option == 1:
+            #CHOOSE PROJECT WITHIN CLB PROJECTS
+            project_menu_option = Menu.choose_project(main_menu_option)
+            if project_menu_option == 1:
+                GuessTheWord_es.main()
+            elif project_menu_option == 2:
+                main()
+            else:
+                end = True
+        
+        if main_menu_option == 2:
+            #CHOOSE PROJECT WITHIN GUIB PROJECTS
+            project_menu_option = Menu.choose_project(main_menu_option)
+            if project_menu_option == 1:
+                print("Test")
+            elif project_menu_option == 2:
+                main()
+            else:
+                end = True
+            
 if __name__ == "__main__":
+    Menu.wellcome()
     main()
