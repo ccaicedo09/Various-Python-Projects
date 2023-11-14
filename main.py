@@ -65,9 +65,6 @@ def main():
             else:
                 end = True
             
-        
-    
-    
 if __name__ == "__main__":
     Menu.wellcome()
     main()
