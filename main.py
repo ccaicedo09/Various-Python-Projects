@@ -5,7 +5,7 @@ This file works as a menu to go to the project the user wants to give a look to
 import os
 import time
 import pyfiglet
-from Command_Line_Based_Projects.GuessTheWord import GuessTheWord_es
+from Command_Line_Based_Projects.GuessTheWord import GuessTheWord_es as gtw
 
 class Menu():
     
@@ -49,7 +49,7 @@ def main():
             #CHOOSE PROJECT WITHIN CLB PROJECTS
             project_menu_option = Menu.choose_project(main_menu_option)
             if project_menu_option == 1:
-                GuessTheWord_es.main()
+                gtw.main()
             elif project_menu_option == 2:
                 main()
             else:
