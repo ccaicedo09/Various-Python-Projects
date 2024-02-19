@@ -5,7 +5,7 @@ This file works as a menu to go to the project the user wants to give a look to
 import os
 import time
 import pyfiglet
-from Command_Line_Based_Projects import GuessTheWord_es
+from Command_Line_Based_Projects.GuessTheWord import GuessTheWord_es
 
 class Menu():
     
